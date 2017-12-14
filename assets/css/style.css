@@ -1,0 +1,36 @@
+
+.container{
+
+   background-image: url(.../images/background.jpg)
+}
+
+#crystals {
+
+    /* align-content: center; */
+}
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    padding:0 10% 0 10%;
+    font-size: 25px;
+}
+
+.row{
+
+    align-content: center;
+}
+
+.col-md-6 {
+
+    /* background-color: rgb(222, 236, 198);
+    border: black;
+    border: width 5px; */
+}
+
+h3{
+
+    font-size: 20px;
+}
+
