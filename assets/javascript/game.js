@@ -1,4 +1,5 @@
 
+
 var green = 0;
 var white = 0;
 var red = 0;
@@ -30,15 +31,16 @@ var targetNumber = Math.floor(Math.random() * 102) + 19 ;
   console.log(green)
 
   var restart = function(){
-    var targetNumber = Math.floor(Math.random() * 102) + 19 ;
+     targetNumber = Math.floor(Math.random() * 102) + 19 ;
     console.log(targetNumber);
   //players #
-    var counter = 0;
+    counter = 0;
     console.log(counter);
   
-    $("#target-number").append(targetNumber);
+    $("#target-number").text(targetNumber);
   
-    $("#counter").append(counter);
+    $("#counter").text(counter);
+    
 
   }
 
@@ -82,7 +84,7 @@ $("#blue-crystal").click(function(){
       alert("You win!");
       wins = wins + 1;
       $("#wins").append(wins);
-      // restart();
+      restart();
 
     }
 
@@ -90,10 +92,12 @@ $("#blue-crystal").click(function(){
       alert("You lose!!");
       lose = lose + 1;
       $("#lose").append(lose);
-      // restart();
+      restart();
     }
-
+// restart()
   };
+
+  // restart();
 
 
 // this is HTML 12 and the code i could not make work - need to come back to this later
