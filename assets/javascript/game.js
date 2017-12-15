@@ -82,16 +82,16 @@ $("#blue-crystal").click(function(){
 
     if (counter === targetNumber) {
       alert("You win!");
-      wins = wins + 1;
-      $("#wins").append(wins);
+      wins++;
+      $("#wins").text(wins);
       restart();
 
     }
 
     else if (counter >= targetNumber) {
       alert("You lose!!");
-      lose = lose + 1;
-      $("#lose").append(lose);
+      lose++;
+      $("#lose").text(lose);
       restart();
     }
 // restart()
