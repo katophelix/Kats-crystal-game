@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
 
 var green = 0;
 var white = 0;
@@ -47,33 +47,46 @@ var targetNumber = Math.floor(Math.random() * 102) + 19 ;
 //  -*/ $("#crystal-images").append(crystalImages);
 
 $("#white-crystal").click(function(){
-	counter = counter + white;
+	counter += white;
 	$("#counter").text(counter);
 	doNumsMatch();
 });
 
 $("#red-crystal").click(function(){
-	counter = counter + red;
+	counter += red;
 	$("#counter").text(counter);
 	doNumsMatch();
 });
 
 
 $("#green-crystal").click(function(){
-	counter = counter + green;
+	counter += green;
 	$("#counter").text(counter);
 	doNumsMatch();
 });
 
 
 $("#blue-crystal").click(function(){
-	counter = counter + blue;
+	counter += blue;
 	$("#counter").text(counter);
   doNumsMatch();
 });
 
- // All of the same game win-lose logic applies. So the rest remains unchanged.
+// $(".crystal").on('click', function(){
+//   var val = parseInt( $(this).val() );
+//   counter = counter + val;
+//   $('#counter').text(counter);
+// })
 
+ // All of the same game win-lose logic applies. So the rest remains unchanged.
+// #crystal-1
+// #crystal-2
+//  function loopyThing(){
+
+//     loop 1-4
+//     select "#crystal-" + i
+//     set attr('value', randomNum )
+//  }
  
     // alert("New score: " + counter);
 
@@ -96,18 +109,19 @@ $("#blue-crystal").click(function(){
     }
 // restart()
   };
+})
 
   // restart();
 
 
-// this is HTML 12 and the code i could not make work - need to come back to this later
+// //this is HTML 12 and the code i could not make work - need to come back to this later
 // console.log(crystalImages);
 
-  // Now for the hard part. Creating multiple crystals each with their own unique number value.
-    // function randomVal() {
-    //   return Math.floor(Math.random() * 12) + 1; //some random number generator; 
-    // }
-  // We begin by expanding our array to include four options.
+//   //Now for the hard part. Creating multiple crystals each with their own unique number value.
+//     function randomVal() {
+//       return Math.floor(Math.random() * 12) + 1; //some random number generator; 
+//     }
+//  // We begin by expanding our array to include four options.
 //   var numberOptions = [10, 5, 3, 7];
 //   var crystals = [
 //          {value: randomVal(), src:'assets/images/white.jpg'},
@@ -115,22 +129,22 @@ $("#blue-crystal").click(function(){
 //          {value: randomVal(), src:'assets/images/red.jpg'},
 //         {value: randomVal(), src:'assets/images/green.jpg'},
 //     ]
- //  add the crystal images and their attributes
-    //var img = $("<img/>") //document.createElement("img")
-    // var crystals = []
-		// for (i=0; i< crystals.length; i++) {
-		// 	var img = $("<img class='crystal-img'>");  // create image for every crystal
-    //   var crystalValue = Math.floor(Math.random() * 12) +1 
+//   //add the crystal images and their attributes
+//     var img = $("<img/>") //document.createElement("img")
+//     var crystals = []
+// 		for (i=0; i< crystals.length; i++) {
+// 			var img = $("<img class='crystal-img'>");  // create image for every crystal
+//       var crystalValue = Math.floor(Math.random() * 12) +1 
     
-		// 	img.attr("src", "assets/images/blue" + i +".jpg");
-    //   img.attr("id", crystals[i]);  //$("img").attr("id", names of the crystals);
-    //   img.attr("data-crystalValue", crystalValue); //add the random number as crystalValue
-    //   crystalImages.append(img);
-    //   console.log(img);
-    //   console.log("here" + crystalValue);
-    //   var attValue = img.attr("data-crystalValue");
-    //   console.log(attValue);
-	  // }
+// 			img.attr("src", crystals[i].src );
+//       img.attr("id", "crystal-" + i);  //$("img").attr("id", names of the crystals);
+//       img.attr("data-crystalValue", crystalValue); //add the random number as crystalValue
+//       crystalImages.append(img);
+//       console.log(img);
+//       console.log("here" + crystalValue);
+//       var attValue = img.attr("data-crystalValue");
+//       console.log(attValue);
+// 	  }
 	
 
 // var crystalImages = ['assets/images/crys1.jpg', 'assets/images/crys2.jpg', 
