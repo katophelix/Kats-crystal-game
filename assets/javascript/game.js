@@ -15,7 +15,6 @@ $("#you-lose").hide();
 $("#start-button").hide();
 //players #
   var counter = 0;
-  console.log(counter);
 
   $("#target-number").append(targetNumber);
   $("#counter").append(counter);
@@ -27,20 +26,14 @@ $("#start-button").hide();
 	blue = Math.floor((Math.random() * 12) + 1);
 	red = Math.floor((Math.random() * 12) + 1);
   green = Math.floor((Math.random() * 12) + 1);
-  console.log(white)
-  console.log(blue)
-  console.log(red)
-  console.log(green)
 
   var restart = function(){
      targetNumber = Math.floor(Math.random() * 102) + 19 ;
-    console.log(targetNumber);
   //players #
     counter = 0;
-    console.log(counter);
     $("#you-win").hide();
-$("#you-lose").hide();
-$("#start-button").hide();
+    $("#you-lose").hide();
+    $("#start-button").hide();
   
     $("#target-number").text(targetNumber);
   
