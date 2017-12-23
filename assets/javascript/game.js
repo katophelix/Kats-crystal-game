@@ -10,7 +10,9 @@ var lose = 0;
 
 
 var targetNumber = Math.floor(Math.random() * 102) + 19 ;
-  console.log(targetNumber);
+$("#you-win").hide();
+$("#you-lose").hide();
+$("#start-button").hide();
 //players #
   var counter = 0;
   console.log(counter);
@@ -36,6 +38,9 @@ var targetNumber = Math.floor(Math.random() * 102) + 19 ;
   //players #
     counter = 0;
     console.log(counter);
+    $("#you-win").hide();
+$("#you-lose").hide();
+$("#start-button").hide();
   
     $("#target-number").text(targetNumber);
   
@@ -94,21 +99,25 @@ $("#blue-crystal").click(function(){
     {
 
     if (counter === targetNumber) {
-      alert("You win!");
+      $("#you-win").show();
       wins++;
       $("#wins").text(wins);
-      restart();
+      $("#start-button").show();
+      // restart();
 
     }
 
     else if (counter >= targetNumber) {
-      alert("You lose!!");
+      $("#you-lose").show();
       lose++;
       $("#lose").text(lose);
-      restart();
+      $("#start-button").show();
+      // restart();
     }
 // restart()
   };
+
+  $("#start-button").on("click", restart);
 })
 
   // restart();
