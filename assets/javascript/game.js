@@ -38,9 +38,9 @@ $("#start-button").hide();
     $("#target-number").text(targetNumber);
   
     $("#counter").text(counter);
-    
-
   }
+
+
 
 //  -*/ $("#crystal-images").append(crystalImages);
 
